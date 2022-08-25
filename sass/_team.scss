@@ -1,0 +1,39 @@
+.team{
+    background-color: var(--primary-bgk-color);
+    @include tablet{
+        }
+    }
+    
+    .team__bgk{
+    background-color: var(--white-text-color);
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    @include tablet{
+    width: 354px;
+}
+    }
+    
+    .team__list{
+    display: flex;
+    color: var(--primary-text-color);
+    flex-direction: column;
+    gap: 30px;
+    @include tablet{
+    flex-wrap: wrap;
+flex-direction: row;}
+@include desktop{
+flex-wrap: nowrap;}
+    }
+    
+    .team__text{
+    padding: 30px 0 24px 0;}
+    
+    .team__name{
+    @include font(16px, 1.18, 500, 0.03em);
+    margin-bottom: 10px;
+    }
+    
+    .team__work{
+    @include font(16px, 1.18, null, 0.03em);
+    margin-bottom: 16px;
+    }   

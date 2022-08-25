@@ -1,0 +1,60 @@
+.options__flex{
+    display: flex;
+    gap: 30px;
+flex-direction: column;
+@include tablet{
+flex-wrap: wrap;
+flex-direction: row;}
+@include desktop{
+flex-wrap: nowrap;
+}
+}
+    
+    .options__card{
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bgk-color);
+    @include mobile{
+    width: 450px;}
+    @include tablet{
+    width: 354px;}
+    @include desktop{
+    width: 270px;}
+    }
+    
+    .options__icon{
+    width: 70px;
+    height: 70px;}
+    
+    
+    .options__list{
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include tablet{
+    width: 354px;
+    margin: 0;
+}
+    }
+    
+    .options__title{
+    color: var(--primary-text-color);
+    @include font(14px, 1.14, 700, 0.03em);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+    
+    .visually-hidden{
+    position: fixed;
+    transform: scale(0);
+    }
+    
+    .options__text{
+        text-align: start;
+    @include font(14px, 1.71, null, 0.03em);
+    }

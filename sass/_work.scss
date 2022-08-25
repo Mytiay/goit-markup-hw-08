@@ -1,0 +1,33 @@
+.work__flex{
+    display: flex;
+    gap: 30px;
+    }
+    
+    .work__list{
+    position: relative;
+    display: flex;}
+    
+    .work__item{
+    position: absolute;
+    bottom: 0;
+    @include font(14px, 1.14, 700, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .work{
+        position: fixed;
+    transform: scale(0);
+    padding-top: 0;
+    @include desktop{
+    position: initial;
+transform: scale(100%);}
+}
+    
