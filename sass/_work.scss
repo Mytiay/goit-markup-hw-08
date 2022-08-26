@@ -28,6 +28,7 @@
     padding-top: 0;
     @include desktop{
     position: initial;
-transform: scale(100%);}
+transform: scale(100%);
+transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 }
     

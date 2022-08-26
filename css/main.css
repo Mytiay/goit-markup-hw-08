@@ -304,6 +304,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
+  display: none;
 }
 .navigation__list .link {
   font-size: 14px;
@@ -346,6 +347,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+  display: none;
 }
 .contacts .link {
   display: -webkit-box;
@@ -373,6 +375,21 @@ img {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.menu-open {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-open:hover, .menu-open:focus {
+  fill: var(--accent-color);
 }
 
 .hero__btn {
@@ -464,15 +481,20 @@ img {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .portfolio-btn {
@@ -499,20 +521,45 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.current-btn {
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  row-gap: 30px;
+}
+@media screen and (min-width: 480px) {
+  .cards {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
 }
 
 .cards__list {
   position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .cards__list {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .cards__list {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .cards__container {
@@ -561,11 +608,27 @@ img {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+@media screen and (min-width: 768px) {
+  .cards__link {
+    height: 100%;
+  }
+}
 
 .cards__text {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .cards__meta {
+    padding-bottom: 56px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards__meta {
+    padding: 20px 24px;
+  }
 }
 
 .cards__title {
@@ -658,7 +721,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .options__list {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
     margin: 0;
   }
 }
@@ -680,6 +743,7 @@ img {
 }
 
 .options__text {
+  color: var(--secondary-text-color);
   text-align: start;
   font-size: 14px;
   line-height: 1.71;
@@ -735,12 +799,15 @@ img {
     position: initial;
     -webkit-transform: scale(100%);
             transform: scale(100%);
+    -webkit-transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 .team {
   background-color: var(--primary-bgk-color);
 }
+
 .team__bgk {
   background-color: var(--white-text-color);
   text-align: center;
@@ -749,7 +816,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team__bgk {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__bgk {
+    width: calc((100% - 90px) / 4);
   }
 }
 
@@ -786,6 +858,7 @@ img {
 }
 
 .team__name {
+  color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.18;
   font-weight: 500;
@@ -794,6 +867,7 @@ img {
 }
 
 .team__work {
+  color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -1458,4 +1532,99 @@ img {
   padding: 10px 55px 10px 56px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white-text-color);
+  top: 0;
+  padding: 10px 15px 40px 48px;
+}
+.mob-menu > .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  overflow: auto;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close:hover, .menu-close:focus {
+  fill: var(--accent-color-hover);
+}
+
+.mob-menu-item {
+  font-size: 40px;
+  line-height: 1.17;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.mob-menu-item .link {
+  color: var(--primary-text-color);
+}
+.mob-menu-item .current {
+  color: var(--accent-color);
+}
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-tel {
+  font-size: 34px;
+  line-height: 1.76;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+.mob-menu-tel .link {
+  color: var(--accent-color);
+}
+
+.mob-menu-mail {
+  font-size: 24px;
+  line-height: 1.16;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 64px;
+}
+.mob-menu-mail .link {
+  color: var(--secondary-text-color);
+}
+
+.mob-menu-soc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.mob-soc-list {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-link {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
