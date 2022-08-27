@@ -19,7 +19,7 @@
 
     .navigation__list{
     display: flex;
-    margin-left: 93px;
+    margin-left: 88px;
     display: none;
     .link {
         @include font(14px, 1.14, 500, 0.02em);
@@ -28,9 +28,13 @@
         padding-bottom: 32px;
         color: var(--primary-text-color);
         text-decoration: none;
-
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
+        @include tablet{
+        display: flex;
+    }
+    @include desktop{
+        margin-left: 93px;}
     }
     
     .navigation__item{
@@ -68,12 +72,35 @@
         text-decoration: none;
         @include font(14px, 1.14, 500, 0.02em);
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        @include tablet{
+            font-size: 12px;
+            line-height: 1.16;
+            padding: 0;
+            @include desktop{
+            font-size: 14px;
+        line-height: 1.14;
+    padding-top: 32px;
+padding-bottom: 32px;}
+       }
         }
+        @include tablet{
+        display: block; 
+    }
+    @include desktop{
+    display: flex;}
     }
 
     .contacts__item{
         .contacts &:not(:last-child){
+            @include desktop{
             margin-right: 30px;
+            margin-bottom: 0;
+            }
+            @include tablet{
+                margin-bottom: 10px;
+            }
+            @include desktop{
+            margin-bottom: 0;}
             }
     }
     
@@ -94,4 +121,6 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 &:hover,
 &:focus{
 fill: var(--accent-color);}
+@include tablet{
+display: none;}
 }
