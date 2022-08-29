@@ -47,6 +47,7 @@ flex-wrap: nowrap;
     @include font(14px, 1.14, 700, 0.03em);
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: start;
     }
     
     .visually-hidden{

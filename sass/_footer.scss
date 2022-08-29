@@ -6,9 +6,7 @@
     }
     
     .footer__container{
-    @include tablet{
-    flex-basis: 50%;
-    }
+    @include tablet{}
     @include desktop {
     flex-basis: content;
     margin-left: 70px;}
@@ -73,21 +71,38 @@
     }
     
     .footer-wrap{
+    @include mobile{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 60px;
-    @include tablet{
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
+    align-items: center;
     }
+    @include tablet{
+    display: block;
+}
     @include desktop{
     flex-wrap: nowrap;
     gap: 0;}
     }
-    
+
+.footer__adaptive{
+display: block;
+margin-bottom: 60px;
+@include tablet{
+display: flex;
+justify-content: space-around;
+}}
+
+.footer__responsive{
+margin-bottom: 60px;
+display: flex;
+flex-direction: column;
+align-items: center;
+@include tablet{
+margin-bottom: 0;
+display: flex;
+flex-direction: column;
+}}
+
     .subscribe{
     display: flex;
     flex-wrap: wrap;
