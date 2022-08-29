@@ -6,19 +6,15 @@
     }
     
     .footer__container{
-    @include tablet{}
     @include desktop {
-    flex-basis: content;
-    margin-left: 70px;}
+    flex-basis: content;}
     } 
     
     .logo__bottom{
     padding: 0;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
     @include desktop{
-    justify-content: start;}
+    }
     }
 
     .footer__logo {
@@ -78,10 +74,12 @@
     }
     @include tablet{
     display: block;
-}
+    }
     @include desktop{
-    flex-wrap: nowrap;
-    gap: 0;}
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    }
     }
 
 .footer__adaptive{
@@ -90,7 +88,12 @@ margin-bottom: 60px;
 @include tablet{
 display: flex;
 justify-content: space-around;
-}}
+}
+@include desktop{
+justify-content: start;
+margin-bottom: 0;
+align-items: baseline;}
+}
 
 .footer__responsive{
 margin-bottom: 60px;
@@ -99,19 +102,23 @@ flex-direction: column;
 align-items: center;
 @include tablet{
 margin-bottom: 0;
-display: flex;
-flex-direction: column;
-}}
+}
+@include desktop{
+margin-right: 70px;
+align-items: start;}
+}
 
     .subscribe{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     @include tablet{
-    flex-basis: 50%;
+    flex-direction: column;
+ align-items: center;
     @include desktop {
     margin-left: auto;
-justify-content: start;}
+justify-content: start;
+align-items: baseline}
     }
     }
 
@@ -152,6 +159,9 @@ justify-content: start;}
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    @include desktop{
+    flex-direction: row;}
     }  
     
     .subscribe__btn{
