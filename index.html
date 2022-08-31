@@ -27,9 +27,9 @@
       </ul>
     </nav>
       <ul class="contacts">
-        <li class="contacts__item"><a href="mailto:info@devstudio.com" class="link">
+        <li class="contacts__item"><a href="mailto:info@devstudio.com" class="link contacts__mail">
           <svg class="contacts__icon" width="16px" height="12px"><use href="./images/icon.svg#icon-mail"></use></svg> info@devstudio.com</a></li>
-        <li class="contacts__item"><a href="tel:+380961111111" class="link">
+        <li class="contacts__item"><a href="tel:+380961111111" class="link contacts__tel">
           <svg class="contacts__icon" width="10px" height="16px"><use href="./images/icon.svg#icon-smartphone"></use></svg> +38 096 111 11 11</a></li>
       </ul>
       <button class="menu-open" aria-expanded="false" aria-controls="mobile-menu" type="button">
@@ -139,15 +139,24 @@
     <h2 class="pre__title">Чем мы занимаемся</h2>
     <ul class="work__flex">
     <li class="work__list">
-      <img src="./images/box/box1.jpg" alt="работа за компьютером" width="370">
+      <img
+      srcset="./images/box/box1.jpg 1x,
+      ./images/box/box1-2x.jpg 2x"
+      src="./images/box/box1.jpg" alt="работа за компьютером" width="370">
       <p class="work__item">Десктопные приложения</p>
     </li>
     <li class="work__list">
-      <img src="./images/box/box2.jpg" alt="работа над приложениями" width="370">
+      <img
+      srcset="./images/box/box2.jpg 1x,
+      ./images/box/box2-2x.jpg 2x"
+      src="./images/box/box2.jpg" alt="работа над приложениями" width="370">
       <p class="work__item">Мобильные приложения</p>
     </li>
     <li class="work__list">
-      <img src="./images/box/box3.jpg" alt="рабат над стилизацией" width="370">
+      <img
+      srcset="./images/box/box3.jpg 1x,
+      ./images/box/box3-2x.jpg 2x" 
+      src="./images/box/box3.jpg" alt="рабат над стилизацией" width="370">
       <p class="work__item">Дизайнерские решения</p>
     </li>
     </ul>

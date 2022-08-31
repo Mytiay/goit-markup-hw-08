@@ -3,7 +3,6 @@
     }
     
     .hero {
-    display: flex;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -16,13 +15,13 @@
         url('../images/hero/Header-mob-2x.jpg');
     }
     background-color: var(--secondary-bgk-color);
-    padding: 118px 15px;
     @include mobile{
     padding-top: 118px;
     padding-bottom: 118px;
     }
     @include tablet{
-    padding: 118px 204px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/Header-tab-1x.jpg');
     @include retina{
@@ -55,6 +54,9 @@
     }
     
     .hero__container {
-    max-width: 696px;
+    max-width: 360px;
     padding: 0;
+    @include desktop {
+        max-width: 696px;
+    }
     }
