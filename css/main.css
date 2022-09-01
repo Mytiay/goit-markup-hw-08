@@ -1721,6 +1721,11 @@ img {
   height: 100%;
   overflow: auto;
 }
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
 
 .mobile-menu {
   -webkit-transform: scale(1) rotate(0);
