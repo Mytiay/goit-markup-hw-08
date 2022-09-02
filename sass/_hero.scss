@@ -3,9 +3,11 @@
     }
     
     .hero {
+
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    min-height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/Header-mob-1x.jpg');
     background-position: center;
@@ -54,8 +56,11 @@
     }
     
     .hero__container {
+        padding-top: 70px;
+        display: block;
     max-width: 360px;
-    padding: 0;
+    @include mobile{
+    padding: 0;}
     @include desktop {
         max-width: 696px;
     }

@@ -7,6 +7,7 @@
     
     .footer__container{
     @include desktop {
+        margin-left: 70px;
     flex-basis: content;}
     } 
     
@@ -88,11 +89,12 @@ margin-bottom: 60px;
 @include tablet{
 display: flex;
 justify-content: space-around;
+align-items: baseline;
 }
 @include desktop{
 justify-content: start;
 margin-bottom: 0;
-align-items: baseline;}
+}
 }
 
 .footer__responsive{
@@ -104,7 +106,7 @@ align-items: center;
 margin-bottom: 0;
 }
 @include desktop{
-margin-right: 70px;
+
 align-items: start;}
 }
 

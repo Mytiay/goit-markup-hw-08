@@ -482,6 +482,7 @@ img {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  min-height: 400px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Header-mob-1x.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Header-mob-1x.jpg");
   background-position: center;
@@ -552,8 +553,14 @@ img {
 }
 
 .hero__container {
+  padding-top: 70px;
+  display: block;
   max-width: 360px;
-  padding: 0;
+}
+@media screen and (min-width: 480px) {
+  .hero__container {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__container {
@@ -1034,6 +1041,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer__container {
+    margin-left: 70px;
     -ms-flex-preferred-size: content;
         flex-basis: content;
   }
@@ -1164,6 +1172,9 @@ img {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1172,9 +1183,6 @@ img {
         -ms-flex-pack: start;
             justify-content: start;
     margin-bottom: 0;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
 }
 
@@ -1198,7 +1206,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__responsive {
-    margin-right: 70px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
